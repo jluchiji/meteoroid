@@ -1,5 +1,5 @@
 /* Import everything into the global scope! */
-require('./packages/meteoroid.js')(this);
+require('./packages/meteoroid.js')(this, 'renderer');
 
 /* Import dependencies */
 
@@ -7,10 +7,10 @@ require('./packages/meteoroid.js')(this);
 
 /* UI Code */
 $(document).ready(function () {
-  var myName = new ReactiveVar('Meteoroid');
+  Session.setDefault('greeting', 'Meteoroid')
 
   Tracker.autorun(function () {
-    $('#greeting').text('Hello, ' + myName.get() + '!');
+    $('#greeting').text('Hello, ' + Session.get('greeting') + '!');
   });
 
   $('#reload').click(function () {
@@ -20,7 +20,8 @@ $(document).ready(function () {
   $('form').submit(function (e) {
     e.preventDefault();
     var name = $('#name').val();
-    if (name === '') name = 'Meteoroid';
-    myName.set(name);
+    if (name === '')
+      name = 'Meteoroid';
+    Session.set('greeting', name);
   });
 });
