@@ -14,44 +14,45 @@
   </head>
 
   <body>
+    <div class="container">
+      <img id="chibi" src="assets/chibi.png">
 
-    <img id="chibi" src="assets/chibi.png">
+      <h1 id="greeting">Hello Meteoroid!</h1>
 
-    <h1 id="greeting">Hello Meteoroid!</h1>
+        <form>
+          <input id="name" type="text" class="form-control" placeholder="Username">
+          <div class="row">
+            <div class="col-xs-6">
+              <button id="reload" type="button" class="btn btn-default btn-block">Reload Me!</button>
+            </div>
 
-    <form>
-      <input id="name" type="text" class="form-control" placeholder="Username">
-      <div class="row">
-        <div class="col-xs-6">
-          <button id="reload" type="button" class="btn btn-default btn-block">Reload Me!</button>
-        </div>
-
-          <div class="col-xs-6">
-            <button id="submit" type="submit" class="btn btn-primary btn-block">Submit</button>
+              <div class="col-xs-6">
+                <button id="submit" type="submit" class="btn btn-primary btn-block">Submit</button>
+              </div>
           </div>
-      </div>
-      <p class="text-muted small">Enter your name and submit: you will see the greeting change. It is implemented using Meteor's reactive var.</p>
-    </form>
+          <p class="text-muted small">Enter your name and submit: you will see the greeting change. It is implemented using Meteor's reactive var.</p>
+        </form>
 
-    <hr>
+      <hr>
 
-    <p class="lead">
-      Bigger than dust, smaller than meteor.
-    </p>
+      <p class="lead">
+        Bigger than dust, smaller than meteor.
+      </p>
 
-    <p>
-      <span class="text-primary">Meteoroid</span> is an effort to bring meteor's awesome reactivity and blaze layout to the atom-shell.
-      We might as well throw in underscore, jQuery, bootstrap and other tools to help you develop cross-platform desktop applications
-      as fast as you would do it in meteor.
-    </p>
+      <p>
+        <span class="text-primary">Meteoroid</span> is an effort to bring meteor's awesome reactivity and blaze layout to the atom-shell.
+        We might as well throw in underscore, jQuery, bootstrap and other tools to help you develop cross-platform desktop applications
+        as fast as you would do it in meteor.
+      </p>
 
-    <hr>
+      <hr>
 
-    <p class="text-muted small">
-      Meteoroid © 2014 Denis Luchkin-Zhou<br>
-      Powered by Meteor
-    </p>
+      <p class="text-muted small">
+        Meteoroid © 2014 Denis Luchkin-Zhou<br>
+        Powered by Meteor
+      </p>
 
+    <div>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="packages/twitter/bootstrap/js/bootstrap.min.js"></script>
   </body>
