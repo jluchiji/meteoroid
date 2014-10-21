@@ -1,4 +1,5 @@
-path = require 'path';
+path = require 'path'
+os = require 'os'
 
 module.exports = (grunt) ->
 
@@ -11,6 +12,13 @@ module.exports = (grunt) ->
 
   # Set root to the project root for convenience
   grunt.file.setBase path.resolve '..'
+
+  # Figure out platform-specific commands
+  cliRun = switch os.platform()
+    when 'linux' then path.resolve './dist/atom-shell/atom'
+    when 'darwin' then path.resolve './dist/Atom.app/Contents/MacOS/Atom'
+    when 'win32' then path.resolve './atom-shell/atom.exe'
+    else grunt.fail 'OS not supported...'
 
   # Project configuration
   grunt.initConfig
@@ -41,9 +49,10 @@ module.exports = (grunt) ->
         ext: '.css'
     'shell':
       run:
-        command: './dist/Atom.app/Contents/MacOS/Atom ./dist/app'
+        command: cliRun + ' ./dist/app'
 
 
   # Register task
-  grunt.registerTask 'download-atom', ['download-atom-shell']
+  grunt.registerTask 'bootstrap', ['download-atom-shell']
   grunt.registerTask 'build', ['clean:app', 'less:app', 'copy']
+  grunt.registerTask 'run', ['shell:run']
