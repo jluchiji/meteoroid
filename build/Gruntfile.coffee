@@ -5,6 +5,7 @@ module.exports = (grunt) ->
   # Load grunt tasks
   grunt.loadNpmTasks 'grunt-download-atom-shell'
   grunt.loadNpmTasks 'grunt-contrib-copy'
+  grunt.loadNpmTasks 'grunt-contrib-clean'
   grunt.loadNpmTasks 'grunt-shell'
 
   # Set root to the project root for convenience
@@ -14,6 +15,7 @@ module.exports = (grunt) ->
   grunt.initConfig
     'clean':
       atom: ['./dist/Atom*']
+      app: ['./dist/app']
     'download-atom-shell':
       version: '0.17.2'
       outputDir: './dist'
@@ -36,4 +38,4 @@ module.exports = (grunt) ->
 
   # Register task
   grunt.registerTask 'download-atom', ['download-atom-shell']
-  grunt.registerTask 'build', ['copy']
+  grunt.registerTask 'build', ['clean:app', 'copy']
