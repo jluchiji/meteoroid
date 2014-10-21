@@ -2,12 +2,38 @@
 <html>
 
   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Hello Meteoroid!</title>
     <script src="app.js"></script>
+
+    <link href="packages/twitter/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="app.css" rel="stylesheet">
   </head>
 
   <body>
+
+    <img id="chibi" src="assets/chibi.png">
+
     <h1>Hello Meteoroid!</h1>
+    <button class="btn btn-lg btn-primary" type="button" onclick="document.location.reload()">Reload Me!</button>
+
+    <hr>
+
+    <p class="lead">
+      Bigger than dust, smaller than meteor.
+    </p>
+
+    <p>
+      <span class="text-primary">Meteoroid</span> is an effort to bring meteor's awesome reactivity and blaze layout to the atom-shell.
+      We might as well throw in underscore, jQuery, bootstrap and other tools to help you develop cross-platform desktop applications
+      as fast as you would do it in meteor.
+    </p>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="packages/twitter/bootstrap/js/bootstrap.min.js"></script>
   </body>
 
 </html>
