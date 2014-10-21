@@ -27,7 +27,7 @@
  */
 
 /* Import Tracker */
-Tracker = require('./tracker.js');
+Tracker = require('../meteor:tracker/tracker.js');
 
 /**
  * @class

@@ -23,7 +23,7 @@
   Tracker.currentComputation = null;
 
   var setCurrentComputation = function (c) {
-    Tracker.currentComputation = c;0
+    Tracker.currentComputation = c;
     Tracker.active = !! c;
   };
 
