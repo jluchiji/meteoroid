@@ -1,0 +1,8 @@
+{
+  "name": "meteoroid",
+  "version": "0.1.0",
+  "main": "meteoroid.js",
+  "dependencies": {
+    "underscore": "~1.7.0"
+  }
+}
