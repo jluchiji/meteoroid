@@ -4,7 +4,7 @@
    ---------------------------------------------------------------------------- */
 
 
-  Tracker = module.exports;
+  module.exports = Tracker = { };
 
   // http://docs.meteor.com/#tracker_active
 

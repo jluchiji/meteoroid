@@ -11,6 +11,7 @@ module.exports = function (scope) {
     ReactiveVar:    require('./meteor/reactive-var/reactive-var.js'),
 
     /* jQuery */
-    jQuery:         require('./jquery/jquery/jquery.min.js')
+    jQuery:         require('./jquery/jquery/jquery.min.js'),
+    $:              require('./jquery/jquery/jquery.min.js')
   });
 };
