@@ -8,6 +8,9 @@ _ = require('underscore');
 module.exports = function (scope) {
   _.extend(scope, {
     Tracker:        require('./meteor/tracker/tracker.js'),
-    ReactiveVar:    require('./meteor/reactive-var/reactive-var.js')
+    ReactiveVar:    require('./meteor/reactive-var/reactive-var.js'),
+
+    /* jQuery */
+    jQuery:         require('./jquery/jquery/jquery.min.js')
   });
 };

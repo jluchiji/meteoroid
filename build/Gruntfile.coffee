@@ -4,8 +4,9 @@ module.exports = (grunt) ->
 
   # Load grunt tasks
   grunt.loadNpmTasks 'grunt-download-atom-shell'
-  grunt.loadNpmTasks 'grunt-contrib-copy'
   grunt.loadNpmTasks 'grunt-contrib-clean'
+  grunt.loadNpmTasks 'grunt-contrib-copy'
+  grunt.loadNpmTasks 'grunt-contrib-less'
   grunt.loadNpmTasks 'grunt-shell'
 
   # Set root to the project root for convenience
@@ -29,8 +30,15 @@ module.exports = (grunt) ->
       app:
         expand: yes
         cwd: './app'
-        src: ['**/*.html', '**/*.js', '**/*.css', '**/*.json']
+        src: ['**/*.html', '**/*.js', '**/*.css', '**/*.json', 'assets/*.*']
         dest: './dist/app'
+    'less':
+      app:
+        expand: yes
+        cwd: './app'
+        src: ['**/*.less', '!**/*.import.less', '!*node_modules*']
+        dest: './dist/app'
+        ext: '.css'
     'shell':
       run:
         command: './dist/Atom.app/Contents/MacOS/Atom ./dist/app'
@@ -38,4 +46,4 @@ module.exports = (grunt) ->
 
   # Register task
   grunt.registerTask 'download-atom', ['download-atom-shell']
-  grunt.registerTask 'build', ['clean:app', 'copy']
+  grunt.registerTask 'build', ['clean:app', 'less:app', 'copy']
