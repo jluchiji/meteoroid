@@ -49,4 +49,12 @@ module.exports = function (scope, p) {
 
   }
 
+  /* Common stuff */
+  _.extend(scope, {
+    Meteoroid: {
+      /* On-the-fly loading */
+      load: require('./meteoroid-load.js')
+    }
+  });
+
 };
