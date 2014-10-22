@@ -1,7 +1,8 @@
+var load = require('../../meteoroid-load.js');
 
 /* Load dependencies */
-Tracker = require('../tracker/module.js').Tracker;
-EJSON = require('../ejson/module.js').EJSON;
+load(this, 'meteor:tracker');
+load(this, 'meteor:ejson');
 
 /* Load Files */
 require('./reactive-dict.js')(this);

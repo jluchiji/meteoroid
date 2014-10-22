@@ -1,6 +1,8 @@
+var load = require('../../meteoroid-load.js');
 
 /* Load dependencies */
-Deps = require('../tracker/module.js').Tracker;
+load(this, 'meteor:tracker');
+Deps = Tracker; // Compat.
 
 /* Declarations */
 HTML = {};

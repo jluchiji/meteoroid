@@ -1,7 +1,7 @@
+var load = require('../../meteoroid-load.js');
 
 /* Load dependencies */
-Base64 = require('../base64/module.js').Base64;
-
+load(this, 'meteor:base64');
 
 /* Load Files */
 require('./ejson.js')(this);

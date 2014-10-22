@@ -1,6 +1,7 @@
+var load = require('../../meteoroid-load.js');
 
 /* Load dependencies */
-Tracker = require('../tracker/module.js').Tracker;
+load(this, 'meteor:tracker');
 
 /* Load Files */
 require('./reactive-var.js')(this);

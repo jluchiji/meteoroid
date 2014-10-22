@@ -5,14 +5,7 @@
 _ = require('underscore');
 
 /* Package loader */
-var load = function (scope, pkg) {
-
-  pkg = {author: pkg.split(':')[0], name: pkg.split(':')[1]};
-  var path = _.template('./<%= author %>/<%= name %>/module.js')(pkg);
-  pkg = require(path);
-
-  _.extend(scope, pkg);
-}
+var load = require('./meteoroid-load.js');
 
 
 
