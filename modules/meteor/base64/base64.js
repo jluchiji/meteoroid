@@ -1,9 +1,4 @@
 
-_ = require('underscore');
-
-module.exports = function (imports) {
-
-  _.extend(this, imports);
   // Base 64 encoding
 
   var BASE_64_CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
@@ -148,8 +143,3 @@ module.exports = function (imports) {
     }
     return arr;
   };
-
-
-  /* MRD: Export variables */
-  imports.Base64 = Base64;
-}

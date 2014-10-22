@@ -1,0 +1,15 @@
+{
+  "name": "tracker",
+  "summary": "Dependency tracker to allow reactive callbacks",
+  "version": "1.0.3-rc.0",
+  "use": [
+
+  ],
+  "files": [
+    "tracker.js"
+  ],
+  "export": [
+    "Tracker",
+    "Deps"
+  ]
+}

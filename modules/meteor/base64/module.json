@@ -1,0 +1,12 @@
+{
+  "name": "base64",
+  "summary": "Base64 encoding and decoding",
+  "version": "1.0.1-rc.0",
+  "use": [ ],
+  "files": [
+    "base64.js"
+  ],
+  "export": [
+    "Base64"
+  ]
+}

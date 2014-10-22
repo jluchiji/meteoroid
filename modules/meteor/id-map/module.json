@@ -1,0 +1,16 @@
+{
+  "name": "id-map",
+  "summary": "Dictionary data structure allowing non-string keys",
+  "version": "1.0.1-rc.0",
+  "use": [
+    "meteor:underscore",
+    "meteor:json",
+    "meteor:ejson"
+  ],
+  "files": [
+    "id-map.js"
+  ],
+  "export": [
+    "IdMap"
+  ]
+}

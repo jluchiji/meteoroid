@@ -10,6 +10,8 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-less'
   grunt.loadNpmTasks 'grunt-shell'
 
+  grunt.loadTasks './tasks'
+
   # Set root to the project root for convenience
   grunt.file.setBase path.resolve '..'
 
@@ -56,6 +58,13 @@ module.exports = (grunt) ->
         command: 'cd app && npm install'
       run:
         command: cliRun + ' ./dist/app'
+    'mrd-build-module':
+      meteor:
+        expand: yes
+        cwd: './modules/meteor'
+        src: ['*']
+        dest: './dist/app/modules/meteor'
+
 
 
   # Register tasks

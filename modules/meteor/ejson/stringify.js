@@ -6,12 +6,7 @@
 //    Public Domain.
 //
 //    NO WARRANTY EXPRESSED OR IMPLIED. USE AT YOUR OWN RISK.
-_ = require('underscore');
 
-module.exports = function (imports) {
-
-  _.extend(this, imports);
-  
   function quote(string) {
     return JSON.stringify(string);
   }
@@ -121,5 +116,3 @@ module.exports = function (imports) {
     }
     return str('', {'': value}, options.indent, "", options.canonical);
   };
-
-};

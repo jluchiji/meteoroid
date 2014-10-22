@@ -1,0 +1,16 @@
+{
+  "name": "reactive-dir",
+  "summary": "Reactive dictionary",
+  "version": "1.0.4-rc.0",
+  "use": [
+    "meteor:underscore",
+    "meteor:tracker",
+    "meteor:ejson"
+  ],
+  "files": [
+    "reactive-dict.js"
+  ],
+  "export": [
+    "ReactiveDict"
+  ]
+}

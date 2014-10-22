@@ -1,9 +1,3 @@
-_ = require('underscore');
-
-module.exports = function (imports) {
-
-  _.extend(this, imports);
-
 
   /**
    * @namespace
@@ -514,7 +508,3 @@ module.exports = function (imports) {
   // then 'base64' would have to use EJSON.newBinary, and 'ejson' would
   // also have to use 'base64'.)
   EJSON.newBinary = Base64.newBinary;
-
-  /* Export EJSON */
-  imports.EJSON = EJSON;
-}

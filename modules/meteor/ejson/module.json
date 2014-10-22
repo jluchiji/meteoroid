@@ -1,0 +1,17 @@
+{
+  "name": "ejson",
+  "summary": "Extended and Extensible JSON library",
+  "version": "1.0.4-rc.0",
+  "use": [
+    "meteor:json",
+    "meteor:base64",
+    "meteor:underscore"
+  ],
+  "files": [
+    "ejson.js",
+    "stringify.js"
+  ],
+  "export": [
+    "EJSON"
+  ]
+}

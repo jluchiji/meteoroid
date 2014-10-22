@@ -1,0 +1,16 @@
+{
+  "name": "htmljs",
+  "summary": "Small library for expressing HTML trees",
+  "version": "1.0.2-rc.0",
+  "use": [
+    "meteor:tracker"
+  ],
+  "files": [
+    "preamble.js",
+    "visitors.js",
+    "html.js"
+  ],
+  "export": [
+    "HTML"
+  ]
+}
