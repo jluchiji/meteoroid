@@ -3,6 +3,11 @@
     Package docs at <http://docs.meteor.com/#tracker>
    ---------------------------------------------------------------------------- */
 
+_ = require('underscore');
+
+module.exports = function (imports) {
+
+  _.extend(this, imports);
 
   Tracker = { };
 
@@ -502,4 +507,5 @@
 
 
   /* MRD: Export variables */
-  module.exports = {Tracker: Tracker};
+  imports.Tracker = Tracker;
+};

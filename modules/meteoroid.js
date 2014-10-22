@@ -8,7 +8,7 @@ _ = require('underscore');
 var load = function (scope, pkg) {
 
   pkg = {author: pkg.split(':')[0], name: pkg.split(':')[1]};
-  var path = _.template('./<%= author %>/<%= name %>/<%= name %>.js')(pkg);
+  var path = _.template('./<%= author %>/<%= name %>/module.js')(pkg);
   pkg = require(path);
 
   _.extend(scope, pkg);
@@ -25,7 +25,7 @@ module.exports = function (scope, p) {
     load(scope, 'meteor:tracker');
     load(scope, 'meteor:reactive-var');
     load(scope, 'meteor:reactive-dict');
-    
+
     /* Other packages */
     scope.jQuery = require('jquery');
     scope._ = require('underscore');
