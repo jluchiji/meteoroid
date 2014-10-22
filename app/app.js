@@ -1,5 +1,5 @@
 /* Import everything into the global scope! */
-require('./packages/meteoroid.js')(this, 'renderer');
+require('./modules/meteoroid.js')(this, 'renderer');
 
 /* Import dependencies */
 

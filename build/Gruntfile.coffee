@@ -20,6 +20,8 @@ module.exports = (grunt) ->
     when 'win32' then path.resolve './atom-shell/atom.exe'
     else grunt.fail 'OS not supported...'
 
+
+
   # Project configuration
   grunt.initConfig
     'clean':
@@ -30,11 +32,11 @@ module.exports = (grunt) ->
       outputDir: './dist'
       reuild: yes
     'copy':
-      packages:
+      modules:
         expand: yes
-        cwd: './packages'
+        cwd: './modules'
         src: ['**/*.*']
-        dest: './dist/app/packages'
+        dest: './dist/app/modules'
       app:
         expand: yes
         cwd: './app'
@@ -50,9 +52,19 @@ module.exports = (grunt) ->
     'shell':
       run:
         command: cliRun + ' ./dist/app'
+    'build-module':
+      build:
+        expand: yes
+        cwd: './modules'
+        src: ['*/*']
+        dest: './dist/app/modules'
+        
+  # Custom task for building modules
+  grunt.registerTask 'build-module', ->
+    grunt.log.writeln(@target)
 
 
-  # Register task
+  # Register tasks
   grunt.registerTask 'bootstrap', ['download-atom-shell']
   grunt.registerTask 'build', ['clean:app', 'less:app', 'copy']
   grunt.registerTask 'run', ['shell:run']

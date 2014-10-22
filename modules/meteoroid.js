@@ -27,7 +27,7 @@ module.exports = function (scope, p) {
       ReactiveDict:   load('meteor:reactive-dict'),
 
       /* jQuery */
-      jQuery:         load('jquery:jquery')
+      jQuery:         require('jquery')
     });
 
     /* Add aliases */
