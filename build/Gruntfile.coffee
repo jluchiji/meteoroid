@@ -52,11 +52,13 @@ module.exports = (grunt) ->
     'shell':
       bootstrap:
         command: 'cd modules && npm install'
+      app:
+        command: 'cd app && npm install'
       run:
         command: cliRun + ' ./dist/app'
 
 
   # Register tasks
-  grunt.registerTask 'bootstrap', ['download-atom-shell', 'shell:bootstrap']
+  grunt.registerTask 'bootstrap', ['download-atom-shell', 'shell:bootstrap', 'shell:app']
   grunt.registerTask 'build', ['clean:app', 'less:app', 'copy']
   grunt.registerTask 'run', ['shell:run']
