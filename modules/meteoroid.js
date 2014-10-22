@@ -5,12 +5,13 @@
 _ = require('underscore');
 
 /* Package loader */
-var load = function (pkg) {
+var load = function (scope, pkg) {
 
   pkg = {author: pkg.split(':')[0], name: pkg.split(':')[1]};
-  path = _.template('./<%= author %>/<%= name %>/<%= name %>.js')(pkg);
+  var path = _.template('./<%= author %>/<%= name %>/<%= name %>.js')(pkg);
+  pkg = require(path);
 
-  return require(path);
+  _.extend(scope, pkg);
 }
 
 
@@ -20,15 +21,14 @@ module.exports = function (scope, p) {
 
   if (p === 'renderer') {
     /* Export packages */
-    _.extend(scope, {
-      EJSON:          load('meteor:ejson'),
-      Tracker:        load('meteor:tracker'),
-      ReactiveVar:    load('meteor:reactive-var'),
-      ReactiveDict:   load('meteor:reactive-dict'),
-
-      /* jQuery */
-      jQuery:         require('jquery')
-    });
+    load(scope, 'meteor:ejson');
+    load(scope, 'meteor:tracker');
+    load(scope, 'meteor:reactive-var');
+    load(scope, 'meteor:reactive-dict');
+    
+    /* Other packages */
+    scope.jQuery = require('jquery');
+    scope._ = require('underscore');
 
     /* Add aliases */
     _.extend(scope, {

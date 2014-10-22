@@ -50,21 +50,13 @@ module.exports = (grunt) ->
         dest: './dist/app'
         ext: '.css'
     'shell':
+      bootstrap:
+        command: 'cd modules && npm install'
       run:
         command: cliRun + ' ./dist/app'
-    'build-module':
-      build:
-        expand: yes
-        cwd: './modules'
-        src: ['*/*']
-        dest: './dist/app/modules'
-        
-  # Custom task for building modules
-  grunt.registerTask 'build-module', ->
-    grunt.log.writeln(@target)
 
 
   # Register tasks
-  grunt.registerTask 'bootstrap', ['download-atom-shell']
+  grunt.registerTask 'bootstrap', ['download-atom-shell', 'shell:bootstrap']
   grunt.registerTask 'build', ['clean:app', 'less:app', 'copy']
   grunt.registerTask 'run', ['shell:run']

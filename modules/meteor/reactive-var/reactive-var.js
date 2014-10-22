@@ -27,7 +27,7 @@
  */
 
 /* Import Tracker */
-Tracker = require('../tracker/tracker.js');
+Tracker = require('../tracker/tracker.js').Tracker;
 
 /**
  * @class
@@ -99,4 +99,4 @@ ReactiveVar.prototype._numListeners = function() {
 };
 
 /* Export the constructor function */
-module.exports = ReactiveVar;
+module.exports = {ReactiveVar: ReactiveVar};

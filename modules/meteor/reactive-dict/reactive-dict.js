@@ -8,8 +8,8 @@
 
 /* Import necessary stuff */
 _ = require('underscore');
-Tracker = require('../tracker/tracker.js');
-EJSON = require('../ejson/ejson.js');
+Tracker = require('../tracker/tracker.js').Tracker;
+EJSON = require('../ejson/ejson.js').EJSON;
 
 // XXX come up with a serialization method which canonicalizes object key
 // order, which would allow us to use objects as values for equals.
@@ -131,4 +131,4 @@ _.extend(ReactiveDict.prototype, {
 });
 
 // MRD: Export ReactiveDict
-module.exports = ReactiveDict;
+module.exports = {ReactiveDict: ReactiveDict};

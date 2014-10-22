@@ -4,7 +4,7 @@
    ---------------------------------------------------------------------------- */
 
 
-  module.exports = Tracker = { };
+  Tracker = { };
 
   // http://docs.meteor.com/#tracker_active
 
@@ -499,3 +499,7 @@
     afterFlushCallbacks.push(f);
     requireFlush();
   };
+
+
+  /* MRD: Export variables */
+  module.exports = {Tracker: Tracker};

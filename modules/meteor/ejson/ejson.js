@@ -1,5 +1,5 @@
 /* Import dependencies */
-Base64 = require('../base64/base64.js');
+Base64 = require('../base64/base64.js').Base64;
 
 /**
  * @namespace
@@ -515,4 +515,4 @@ EJSON.newBinary = Base64.newBinary;
 require('./stringify.js')(EJSON);
 
 /* Export EJSON */
-module.exports = EJSON;
+module.exports = {EJSON: EJSON};

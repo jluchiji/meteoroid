@@ -8,7 +8,7 @@ for (var i = 0; i < BASE_64_CHARS.length; i++) {
   BASE_64_VALS[BASE_64_CHARS.charAt(i)] = i;
 };
 
-Base64 = module.exports = {};
+Base64 = { };
 
 Base64.encode = function (array) {
 
@@ -142,3 +142,7 @@ Base64.decode = function (str) {
   }
   return arr;
 };
+
+
+/* MRD: Export variables */
+module.exports = {Base64: Base64};
