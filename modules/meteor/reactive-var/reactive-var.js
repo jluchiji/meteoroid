@@ -27,9 +27,6 @@
  */
 
 
-/* Import Tracker */
-Tracker = require('../tracker/tracker.js').Tracker;
-
 /**
  * @class
  * @instanceName reactiveVar

@@ -1,0 +1,13 @@
+{
+  "name": "json",
+  "summary": "Provides JSON.stringify and JSON.parse for older browsers",
+  "version": "1.0.1-rc.0",
+  "use": [ ],
+  "files": [
+    "json_native.js",
+    "json2.js"
+  ],
+  "export": [
+    "JSON"
+  ]
+}

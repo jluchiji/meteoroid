@@ -18,10 +18,10 @@ module.exports = function (scope, p) {
     load(scope, 'meteor:tracker');
     load(scope, 'meteor:reactive-var');
     load(scope, 'meteor:reactive-dict');
+    load(scope, 'meteor:underscore');
 
     /* Other packages */
     scope.jQuery = require('jquery');
-    scope._ = require('underscore');
 
     /* Add aliases */
     _.extend(scope, {

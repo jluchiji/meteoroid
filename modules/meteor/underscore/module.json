@@ -1,0 +1,14 @@
+{
+  "name": "underscore",
+  "summary": "Collection of small helpers: _.map, _.each, ...",
+  "version": "1.0.1-rc.0",
+  "use": [ ],
+  "files": [
+    "pre.js",
+    "underscore.js",
+    "post.js"
+  ],
+  "export": [
+    "_"
+  ]
+}

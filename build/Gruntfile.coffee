@@ -37,7 +37,7 @@ module.exports = (grunt) ->
       modules:
         expand: yes
         cwd: './modules'
-        src: ['**/*.*']
+        src: ['**/*', '!meteor/*']
         dest: './dist/app/modules'
       app:
         expand: yes
@@ -69,5 +69,5 @@ module.exports = (grunt) ->
 
   # Register tasks
   grunt.registerTask 'bootstrap', ['download-atom-shell', 'shell:bootstrap', 'shell:app']
-  grunt.registerTask 'build', ['clean:app', 'less:app', 'copy']
+  grunt.registerTask 'build', ['clean:app', 'less:app', 'mrd-build-module', 'copy']
   grunt.registerTask 'run', ['shell:run']
