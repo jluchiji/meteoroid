@@ -6,9 +6,16 @@
     "meteor:underscore"
   ],
   "files": [
-    "preamble.js",
+    "client_environment.js",
     "helpers.js",
-    "debug.js"
+    "setimmediate.js",
+    "timers.js",
+    "errors.js",
+    "fiber_stubs_client.js",
+    "startup_client.js",
+    "debug.js",
+    "dynamics_browser.js",
+    "url_common.js"
   ],
   "export": [
     "Meteor"
