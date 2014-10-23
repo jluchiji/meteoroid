@@ -1,19 +1,26 @@
 # Meteoroid
-**Meteoroid:** bigger than dust but smaller than an asteroid.
+
+![](meteoroid.png)
+
+*Bigger than dust, smaller than meteor.*
 [Meteor][1] flavored [Atom Shell][2]. Or [Atom Shell][2] flavored [Meteor][1].
 
-This project attempts to produce a cross between [meteor][1] and [atom-shell][2]. Wouldn't be full stack reactivity awesome for building desktop applications? I think so.
+This project attempts to create a version of [Meteor][1] for development of desktop applications. More specifically, I am trying to incorporate the most essential features of the Meteor into the [Atom Shell][2]. I plan to support most of the client side features of the Meteor, inclusing reactivity, minimongo, blaze and spacebars.
+
+At this point this project is still proof of concept work, and everything is subject to drastic change. With that being said, reactivity and minimongo seem to work as intended, while I am actively working on porting blaze and spacebars.
+
+**Note:** This is not a Meteor compatible framework! Copy-pasted Meteor apps are very unlikely to work without modification. That being said, I will do my best to ensure that client-side development remains consistent with the Meteor.
+
+## Differences from Meteor
+
+First of all, Meteoroid is a client-only framework, meaning that it will have no DDP or RPC support (unless your application needs to interface with such endpoints). Server-side code will **not** work here.
+
+Meteoroid will use its own Grunt.js based build system. It will be based on the Meteor's build system, but expect a few differences. Therefore, there will be no support for atmosphere packages, though most of them can be converted into Meteoroid modules very easily.
 
 ## Directory Structure
  - `app`: Boilerplate app for testing purposes
  - `build`: Gruntfile and build scripts
- - `src`: Meteoroid-specific scripts
- - `packages`: Meteor packages
-
-## Project Goal
-At this point the goal of this project is **not** porting the entire meteor to the atom-shell because it makes little sense. Meteor is a server-client framework, but atom-shell runs locally, despite it having distinct *browser* and *renderer* processes.
-
-I believe that atom-shell is in need of a specialized, meteor-based framework that would bring in the full stack reactivity, while preserving its ability to utilize any node.js module. Therefore the framework will only contain the bare minimal of meteor packages required to establish full-stack reactivity. I do not plan to support meteor packages or make the package system modular. We kinda already have something for that, which is called `npm`.
+ - `modules`: Meteoroid modules
 
 ## Building the Meteoroid
 1. Clone the project: `$ git clone https://github.com/jluchiji/meteoroid`
