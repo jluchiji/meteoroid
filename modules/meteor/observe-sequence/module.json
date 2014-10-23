@@ -1,0 +1,17 @@
+{
+  "name": "observe-sequence",
+  "summary": "Observe changes to various sequence types such as arrays, cursors and objects",
+  "version": "1.0.3",
+  "use": [
+    "meteor:tracker",
+    "meteor:underscore",
+    "meteor:minimongo",
+    "meteor:random"
+  ],
+  "files": [
+    "observe_sequence.js"
+  ],
+  "export": [
+    "ObserveSequence"
+  ]
+}
