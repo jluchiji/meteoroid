@@ -37,7 +37,7 @@ module.exports = (grunt) ->
       modules:
         expand: yes
         cwd: './modules'
-        src: ['twitter/**/*', 'node_modules', 'package.json', 'meteoroid*.*']
+        src: ['twitter/**/*', 'node_modules/**/*', 'package.json', 'meteoroid*.*']
         dest: './dist/app/modules'
       app:
         expand: yes
