@@ -32,6 +32,8 @@ module.exports = (grunt) ->
       generated.push '\n\n' + fence
       generated.push '/* Import dependencies */'
       generated.push fence
+      # Always load meteoroid:core module
+      generated.push 'load(this, \'meteoroid:core\');'
       for dep in (info.use ? [ ]) # Allow undefined dependencies
         generated.push 'load(this, \''  + dep + '\');'
       # Load module files
@@ -51,8 +53,8 @@ module.exports = (grunt) ->
       # Write the resulting file
       grunt.file.write path.join(output, 'module.js'), generated.join '\n'
       # Log build completion
-      grunt.log.writeln chalk.green(path.join(output, info.name + '.js'))
-      #grunt.log.writeln chalk.green('OK!')
+      #grunt.log.writeln chalk.green(path.join(output, info.name + '.js'))
+      grunt.log.writeln chalk.green('OK!')
 
     # Compile each module
     @files.forEach (filePair) ->

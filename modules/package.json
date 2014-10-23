@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "main": "meteoroid.js",
   "dependencies": {
-    "underscore": "~1.7.0",
-    "jquery": "~2.1.1"
+    "fibers": "^1.0.2",
+    "jquery": "~2.1.1",
+    "underscore": "~1.7.0"
   }
 }

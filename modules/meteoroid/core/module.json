@@ -1,0 +1,12 @@
+{
+  "name": "meteoroid:core",
+  "summary": "Various core components of the Meteoroid",
+  "version": "0.0.1",
+  "use": [ ],
+  "files": [
+    "npm.js"
+  ],
+  "export": [
+    "Npm"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "name": "minimongo",
+  "summary": "Meteor's client-side datastore: a port of MongoDB to Javascript",
+  "version": "1.0.4-rc.0",
+  "use": [
+    "meteor:meteor",
+    "meteor:underscore",
+    "meteor:json",
+    "meteor:ejson",
+    "meteor:id-map",
+    "meteor:ordered-dict",
+    "meteor:tracker",
+    "meteor:random"
+  ],
+  "files": [
+    "minimongo.js",
+    "wrap_transform.js",
+    "helpers.js",
+    "selector.js",
+    "sort.js",
+    "projection.js",
+    "modify.js",
+    "diff.js",
+    "id_map.js",
+    "observe.js",
+    "objectid.js"
+  ],
+  "export": [
+    "LocalCollection",
+    "Minimongo"
+  ]
+}

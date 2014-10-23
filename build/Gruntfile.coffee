@@ -64,8 +64,11 @@ module.exports = (grunt) ->
         cwd: './modules/meteor'
         src: ['*']
         dest: './dist/app/modules/meteor'
-
-
+      meteoroid:
+        expand: yes
+        cwd: './modules/meteoroid'
+        src: ['*']
+        dest: './dist/app/modules/meteoroid'
 
   # Register tasks
   grunt.registerTask 'bootstrap', ['download-atom-shell', 'shell:bootstrap', 'shell:app']

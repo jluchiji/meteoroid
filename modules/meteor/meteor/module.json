@@ -1,0 +1,16 @@
+{
+  "name": "meteor",
+  "summary": "Core Meteor environment",
+  "version": "1.1.2-rc.1",
+  "use": [
+    "meteor:underscore"
+  ],
+  "files": [
+    "preamble.js",
+    "helpers.js",
+    "debug.js"
+  ],
+  "export": [
+    "Meteor"
+  ]
+}
