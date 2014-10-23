@@ -1,0 +1,32 @@
+{
+  "name": "blaze",
+  "summary": "Meteor Reactive Templating library",
+  "version": "2.0.2",
+  "use": [
+    "meteor:tracker",
+    "meteor:underscore",
+    "meteor:htmljs",
+    "meteor:observe-sequence",
+    "meteor:reactive-var"
+  ],
+  "files": [
+    "preamble.js",
+    "dombackend.js",
+    "domrange.js",
+    "events.js",
+    "attrs.js",
+    "materializer.js",
+    "exceptions.js",
+    "view.js",
+    "builtins.js",
+    "lookup.js",
+    "template.js",
+    "backcompat.js"
+  ],
+  "export": [
+    "Blaze",
+    "UI",
+    "Handlebars",
+    "HTML"
+  ]
+}
