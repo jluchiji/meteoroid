@@ -1,0 +1,20 @@
+{
+  "name": "spacebars-compiler",
+  "summary": "Compiler for Spacebars template language",
+  "version": "1.0.3",
+  "use": [
+    "meteor:htmljs",
+    "meteor:html-tools",
+    "meteor:blaze-tools",
+    "meteor:underscore"
+  ],
+  "files": [
+    "templatetag.js",
+    "optimizer.js",
+    "codegen.js",
+    "compiler.js"
+  ],
+  "export": [
+    "SpacebarsCompiler"
+  ]
+}
