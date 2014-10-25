@@ -1,0 +1,16 @@
+{
+  "name": "templating-build",
+  "summary": "Allows templates to be defined in .html files",
+  "version": "1.0.8",
+  "build-only": true,
+  "use": [
+    "meteor:spacebars-compiler"
+  ],
+  "files": [
+    "html_scanner.js",
+    "compile-templates.js"
+  ],
+  "export": [
+    "Template"
+  ]
+}
