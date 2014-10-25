@@ -1,7 +1,10 @@
 {
-  "name": "meteoroid",
+  "name": "meteoroid-builder",
+  "description": "Gruntfile for Meteoroid projects.",
+  "repository": {"type": "git", "url": "https://github.com/jluchiji/meteoroid.git" },
   "version": "0.1.0",
   "devDependencies": {
+    "load-grunt-config": "~0.14.0",
     "grunt": "^0.4.5",
     "grunt-download-atom-shell": "^0.8.2",
     "grunt-contrib-coffee": "~0.12.0",
