@@ -1,0 +1,20 @@
+{
+  "name": "html-tools",
+  "summary": "Standards-compliant HTML tools",
+  "version": "1.0.2",
+  "use": [
+    "meteor:htmljs"
+  ],
+  "files": [
+    "utils.js",
+    "scanner.js",
+    "charref.js",
+    "tokenize.js",
+    "templatetag.js",
+    "parse.js"
+  ],
+  "export": [
+    "HTMLTools",
+    "HTML"
+  ]
+}

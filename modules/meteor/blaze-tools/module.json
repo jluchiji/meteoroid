@@ -1,0 +1,17 @@
+{
+  "name": "blaze-tools",
+  "summary": "Compile-time tools for Blaze",
+  "version": "1.0.1",
+  "use": [
+    "meteor:htmljs",
+    "meteor:underscore"
+  ],
+  "files": [
+    "preamble.js",
+    "tokens.js",
+    "tojs.js"
+  ],
+  "export": [
+    "BlazeTools"
+  ]
+}
