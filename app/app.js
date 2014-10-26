@@ -1,5 +1,6 @@
 /* Import everything into the global scope! */
-require('./modules/meteoroid.js')(this, 'renderer');
+Meteoroid = require('./modules/meteoroid/core.js').Meteoroid;
+Meteoroid.load(this, 'meteoroid:boilerplate')
 
 /* Import dependencies */
 

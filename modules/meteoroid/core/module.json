@@ -2,11 +2,14 @@
   "name": "meteoroid:core",
   "summary": "Various core components of the Meteoroid",
   "version": "0.0.1",
+  "no-meteoroid": true,
   "use": [ ],
   "files": [
-    "npm.js"
+    "npm.js",
+    "meteoroid.js"
   ],
   "export": [
-    "Npm"
+    "Npm",
+    "Meteoroid"
   ]
 }

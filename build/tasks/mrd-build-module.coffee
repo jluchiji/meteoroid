@@ -24,20 +24,24 @@ module.exports = (grunt) ->
       generated.push '/* For more info, see <https://github.com/jluchiji/meteoroid>   */'
       generated.push fence + '\n\n'
       # Load Meteoroid tools
-      generated.push fence
-      generated.push '/* Import Meteoroid package loader */'
-      generated.push fence
-      generated.push 'var load = require(\'../meteoroid-load.js\');'
-      # Load dependencies
-      generated.push '\n\n' + fence
-      generated.push '/* Import dependencies */'
-      generated.push fence
-      # Always load meteoroid:core module
-      generated.push 'load(this, \'meteoroid:core\');'
-      for dep in (info.use ? [ ]) # Allow undefined dependencies
-        generated.push 'load(this, \''  + dep + '\');'
+      if (not info['no-meteoroid'])
+        generated.push fence
+        generated.push '/* Import Meteoroid package loader */'
+        generated.push fence
+        generated.push 'Meteoroid = require(\'../meteoroid/core.js\').Meteoroid;'
+        # Load dependencies
+        generated.push '\n\n' + fence
+        generated.push '/* Import dependencies */'
+        generated.push fence
+        # Always load meteoroid:core module
+        generated.push 'Meteoroid.load(this, \'meteoroid:core\');'
+        for dep in (info.use ? [ ]) # Allow undefined dependencies
+          generated.push 'Meteoroid.load(this, \''  + dep + '\');'
+      # Fail if no-meteoroid but there are deps
+      if ((info.use and info.use.length isnt 0) and info['no-meteoroid'])
+        grunt.fail 'Cannot have \'no-meteoroid\' flag for a module with dependencies!'
       # Load module files
-      for file in info.files
+      for file in (info.files ? [ ]) # Allow undefined files
         generated.push '\n\n' + fence
         generated.push '/* Included file: '+ path.basename(file) + ' */'
         generated.push fence
@@ -46,10 +50,14 @@ module.exports = (grunt) ->
       generated.push '\n\n' + fence
       generated.push '/* Exports */'
       generated.push fence
+      ###
       generated.push 'module.exports = {'
       for exp in _.initial(info.export)
         generated.push '  \'' + exp + '\': ' + exp + ','
       generated.push '  \'' + _.last(info.export) + '\': ' + _.last(info.export) + '\n};'
+      ###
+      for exp in (info.export ? [ ])
+        generated.push 'module.exports[\'' + exp + '\'] = ' + exp + ';';
       # Write the resulting file
       #grunt.file.write path.join(output, 'module.js'), generated.join '\n'
       grunt.file.write output + '.js', generated.join '\n'

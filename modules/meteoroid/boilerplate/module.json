@@ -1,0 +1,23 @@
+{
+  "name": "boilerplate",
+  "summary": "App boilerplate and common setup.",
+  "version": "0.1.0",
+  "use": [
+    "meteor:ejson",
+    "meteor:tracker",
+    "meteor:reactive-var",
+    "meteor:reactive-dict",
+    "meteor:underscore"
+  ],
+  "files": ["boilerplate.js"],
+  "export": [
+    "jQuery",
+    "EJSON",
+    "Tracker",
+    "ReactiveVar",
+    "ReactiveDict",
+    "Session",
+    "$",
+    "_"
+  ]
+}

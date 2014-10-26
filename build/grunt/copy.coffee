@@ -8,7 +8,7 @@ module.exports =
       'package.json',
       'meteoroid*.*'
     ]
-    dest: './dist/app'
+    dest: './dist/app/modules'
     expand: yes
   app:
     cwd: './app'
