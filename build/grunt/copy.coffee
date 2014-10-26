@@ -5,8 +5,7 @@ module.exports =
     src: [
       'twitter/**/*',
       'node_modules/**/*',
-      'package.json',
-      'meteoroid*.*'
+      'package.json'
     ]
     dest: './dist/app/modules'
     expand: yes

@@ -3,6 +3,7 @@
   "summary": "App boilerplate and common setup.",
   "version": "0.1.0",
   "use": [
+    "meteor:meteor",
     "meteor:ejson",
     "meteor:tracker",
     "meteor:reactive-var",
@@ -12,6 +13,7 @@
   "files": ["boilerplate.js"],
   "export": [
     "jQuery",
+    "Meteor",
     "EJSON",
     "Tracker",
     "ReactiveVar",

@@ -4,7 +4,7 @@ Meteoroid.load(this, 'meteoroid:boilerplate')
 
 /* Import dependencies */
 
-
+Meteoroid.startup(function () { Session.set('greeting', 'Startup'); });
 
 /* UI Code */
 $(document).ready(function () {
