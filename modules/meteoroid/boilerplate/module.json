@@ -3,22 +3,31 @@
   "summary": "App boilerplate and common setup.",
   "version": "0.1.0",
   "use": [
-    "meteor:meteor",
-    "meteor:ejson",
+    "meteor:jquery",
     "meteor:tracker",
     "meteor:reactive-var",
     "meteor:reactive-dict",
-    "meteor:underscore"
+    "meteor:minimongo",
+    "meteor:underscore",
+    "meteor:blaze",
+    "meteor:templating-runtime",
+    "meteor:random",
+    "meteor:ejson"
   ],
   "files": ["boilerplate.js"],
   "export": [
     "jQuery",
     "Meteor",
-    "EJSON",
     "Tracker",
     "ReactiveVar",
     "ReactiveDict",
+    "LocalCollection",
+    "Minimongo",
     "Session",
+    "Blaze",
+    "Template",
+    "Random",
+    "EJSON",
     "$",
     "_"
   ]

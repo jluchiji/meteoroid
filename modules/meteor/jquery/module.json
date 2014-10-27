@@ -1,0 +1,7 @@
+{
+  "name": "jquery",
+  "summary": "jQuery wrapper for Meteoroid",
+  "version": "1.0.0",
+  "files": ["jquery.js"],
+  "export": ["jQuery", "$"]
+}
