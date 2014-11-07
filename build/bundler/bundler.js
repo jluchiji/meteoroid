@@ -15,9 +15,11 @@ bundle= require('./bundle.js');
 module.exports = function () {
 
   // Resulting bundle
-  this.bundle = new bundle();
+  this.bundle = new bundle.Bundle();
 
   // File type handlers
-  this.handlers = { };
+  this.handlers = {
+    js: require('./handler-js.js')
+  };
 
 };

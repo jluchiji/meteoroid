@@ -10,8 +10,27 @@ fs    = require('fs');
 path  = require('path');
 chalk = require('chalk');
 
-// Constructor and class setup
-Bundler = function () {
+// File class (may represent either text content or a file path)
+module.exports.File = function (src, type) {
+
+  // Assign variables
+  this.src = src;
+  this.type = type; // 'file' | 'text'
+
+  // Functions
+  this.get = function () {
+    if (type === 'text') {
+      return this.src;
+    } else if (type === 'file') {
+      return fs.readFileSync(this.src, {encoding: 'utf8'});
+    }
+  };
+
+  return this;
+};
+
+// Bundle class
+module.exports.Bundle = function () {
 
   // HTML and JS
   this.js = [];
@@ -23,7 +42,8 @@ Bundler = function () {
 
   // Source file list
   this.src = [];
+
+  return this;
 }
-module.exports = Bundler;
 
 // Class methods
