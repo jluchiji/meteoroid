@@ -22,7 +22,7 @@ module.exports = function (file, options) {
   // Repeats the character the specified number of times.
   // Returns the resulting string.
   var repeat = function (length, char) {
-    return new Array(length + 1).join(char);
+    return new Array(length < 0 ? 0 : length + 1).join(char);
   };
   // Pads the string with spaces and adds a terminating character.
   // Returns the padded string.
