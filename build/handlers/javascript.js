@@ -76,5 +76,5 @@ module.exports = function (file, options) {
   if (!opt.bare) { codegen.push('\n}).call(this);'); }
 
   /* Push code to bundle */
-  this.js.push(codegen.join('\n'));
+  this.append('js', codegen.join('\n'));
 };
